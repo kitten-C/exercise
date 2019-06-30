@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 't'
+        var b = 'w'
+        [a, b] = [b, a]
+        console.log(b);
+
+
+        var n = count - 1
+        var m = 0
+        arrow && n =[m, m = n][0];
+
+    </script>
+    <script>
+        $(function () {
+            function change(arrow) {
+                var n = count - 1
+                var m = 0
+                m = arrow ? [n, n = m][0] : 0
+                item.eq(count).fadeIn().siblings().fadeOut();
+                item.eq(count).find('img').addClass('on');
+                item.eq(count).siblings().find('img').removeClass('on');
+                if (count == item.length - 1) {
+                    leftTxt.text(item.eq(n).find('img').attr('alt'));
+                    rightTxt.text(item.eq(m).find('img').attr('alt'));
+                    count = -1
+                    console.log(count);
+                    return;
+                }
+                leftTxt.text(item.eq(count - 1).find('img').attr('alt'));
+                rightTxt.text(item.eq(count + 1).find('img').attr('alt'));
+                console.log(count);
+            }
+
+            $(function () {
+
+                var base = $('.cjh .shishen_wrap_con');
+                var left = base.find('.bigImg_btn_left');
+                var right = base.find('.bigImg_btn_right');
+                var item = base.find('.bigImg_item');
+                var leftTxt = left.find('p');
+                var rightTxt = right.find('p');
+                var count = 0;
+
+                right.click(function () {
+                    count++
+                    change(1)
+                })
+
+                left.click(function () {
+                    count--
+                    change(0)
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let url = '?wd=蔡徐坤&skill=篮球&year=2019'
+      let urlData = new URLSearchParams(url)
+      for (let p of urlData) {
+        console.log(p)
+      }
+      console.log(urlData)
+    </script>
+  </body>
+</html>

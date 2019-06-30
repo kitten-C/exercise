@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id='vd' src="yysBgm.mp3" autoplay='autoplay' controls loop></audio>
+</body>
+
+</html>
+<script>
+    function toggleSound() {
+        var music = document.getElementById("vd");//获取ID  
+        console.log(music);
+        console.log(music.paused);
+        if (music.paused) { //判读是否播放  
+            music.paused = false;
+            music.play(); //没有就播放 
+        }
+
+    }
+    toggleSound()
+
+    // setInterval("toggleSound()", 1);
+
+</script>
