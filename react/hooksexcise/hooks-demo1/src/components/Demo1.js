@@ -7,7 +7,16 @@ export default () => {
       <h1>dmo1</h1>
       <div>
         <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>Click me</button>
+        <button
+          onClick={() =>
+            setCount(pro => {
+              console.log(pro)
+              return count + 1
+            })
+          }
+        >
+          Click me
+        </button>
       </div>
     </>
   )
